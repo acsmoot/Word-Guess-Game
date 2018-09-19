@@ -12,45 +12,47 @@
 </head>
 
 <body>
-    <div class=container>
-        <div class="row">
-            <h2 id="directions-text"></h2>
-
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Stats</th>
-                        <th scope="col">#s</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Wins</td>
-                        <td id="wins-text"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Guesses Remaining</td>
-                        <td id="guess-remain"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Losses</td>
-                        <td id="losses-text"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr>
- 
-           <h2 id="footballQuestion-text">Please answer the following football question: </h2> 
-
-           <h3 id="footballAnswer-text">Guess????</h3>     
-
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4" id="directions-text"></h1>
+            <h1 id="footballQuestion-text"></h1>
+            <h2 id="footballAnswer-text"></h2>
         </div>
-        <script src="assets/javascript/game.js" type="text/javascript">
+    </div>
+    <div class=section>
+        <h2 id="footballGuess-text"></h2>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Stats</th>
+                    <th scope="col">#s</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Wins</td>
+                    <td id="wins-text"></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Guesses Remaining</td>
+                    <td id="guess-remain"></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Losses</td>
+                    <td id="losses-text"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/javascript/game.js" type="text/javascript">
 
-        </script>
+    </script>
 </body>
+
 </html>
