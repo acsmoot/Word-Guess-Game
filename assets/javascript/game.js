@@ -105,6 +105,7 @@ function maskFootballAnswer(answer) {
   guessFootballAnswer(answer, maskedAnswer);
 }
 
+
 function guessFootballAnswer(answer, maskedAnswer) {
   // var missing = 0;
   // var wrongGuess = true;
@@ -114,36 +115,30 @@ function guessFootballAnswer(answer, maskedAnswer) {
   var answerLength = answer.length; // have the array.length be Total number of guesses
   // var totalGuesses = answer.length; // have the array.length be Total number of guesses
   // var replacedWord = maskedAnswer;
+  
   var letterGuessedText = document.getElementById("footballGuess-text");
 
-  // while (answerLength > 0) {
   document.onkeyup = function(event) {
-    // for (var j = 0; j < answer.Length; j++) {
     // Determines which key was pressed.
     userGuess = event.key;
     wrongGuess = false;
-
-    // lettersguessed = lettersguessed.push(userGuess);
+   
     console.log("They guessed " + userGuess);
-    // console.log("user has entered" + j + "characters");
     letterGuessedText.textContent = "Your guess is " + userGuess;
 
+    // while (answer.length > 0) {}
     for (k = 0; k < answer.length; k++) {
-      if (answer.charAt(k) == userGuess) {
+	    if (answer.charAt(k) == userGuess) {
         //replace the char in maskedAns with guess
         console.log("guess is in the answer " + answer.charAt(k));
-        //replace ? with char
+        //replace ? with char in right position
         maskedAnswer = maskedAnswer.replace(maskedAnswer.charAt(k), userGuess);
         console.log(maskedAnswer);
-        // maskedAnswer2 = maskedAnswer.setCharAt(k, userGuess);
-        // console.log(maskedAnswer2);
+       
         wrongGuess = true;
         console.log("answerLength " + answerLength);
         answerLength--;
-        // console.log(answer.length + " was changed");
         //display
-      } else if (userGuess == maskedAnswer.charAt(k)) {
-        console.log("Already guessed this letter");
       } else if (wrongGuess) {
         console.log("NOT IN THE ANSWER");
         //counter
